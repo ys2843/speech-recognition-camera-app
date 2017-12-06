@@ -1,0 +1,53 @@
+Language model created by QuickLM on Mon Nov 13 16:23:34 EST 2017
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 7 sentences and 9 words
+
+\data\
+ngram 1=9
+ngram 2=14
+ngram 3=7
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-1.6232 BIGGER -0.2218
+-1.6232 BLUR -0.2218
+-1.6232 BRIGHTER -0.2218
+-1.6232 CHEESE -0.2218
+-1.6232 CLEAR -0.2218
+-1.6232 DARKER -0.2218
+-1.6232 SMALLER -0.2218
+
+\2-grams:
+-1.1461 <s> BIGGER 0.0000
+-1.1461 <s> BLUR 0.0000
+-1.1461 <s> BRIGHTER 0.0000
+-1.1461 <s> CHEESE 0.0000
+-1.1461 <s> CLEAR 0.0000
+-1.1461 <s> DARKER 0.0000
+-1.1461 <s> SMALLER 0.0000
+-0.3010 BIGGER </s> -0.3010
+-0.3010 BLUR </s> -0.3010
+-0.3010 BRIGHTER </s> -0.3010
+-0.3010 CHEESE </s> -0.3010
+-0.3010 CLEAR </s> -0.3010
+-0.3010 DARKER </s> -0.3010
+-0.3010 SMALLER </s> -0.3010
+
+\3-grams:
+-0.3010 <s> BIGGER </s>
+-0.3010 <s> BLUR </s>
+-0.3010 <s> BRIGHTER </s>
+-0.3010 <s> CHEESE </s>
+-0.3010 <s> CLEAR </s>
+-0.3010 <s> DARKER </s>
+-0.3010 <s> SMALLER </s>
+
+\end\

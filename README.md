@@ -67,10 +67,15 @@ When initializing, in the constructor a daemon thread is created for speech reco
 The detailed function of each button is shown below.
 
 Zoom in/out --- Zoom in/out the image by 1. Max is 5, min is 1.
+
 Blur/Clear --- Blur/Clear the image, max level is 5, min is 1
+
 Brightness scale --- Control the brightness, levels from -50 to +50. Original level is 0.
+
 Filters --- Click once the filter is applied while click twice the filter is removed.
+
 Voice Enable --- Enable speech recognition. Initially turned off.
+
 Take Picture --- Save the image to local repository. Photo name start from ‘photo_0’.
 
 Test

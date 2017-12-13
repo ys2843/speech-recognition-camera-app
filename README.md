@@ -8,9 +8,13 @@ this project is implemented object-oriented and there are four classes in it. Sp
 Related Technique
 
 Graphic user interface --- Tkinter
+
 Multi-threading --- thread
+
 Speech recognition --- pocketsphinx, pyaudio
+
 Video process --- cv2, ImageTk, Image, os, numpy
+
 Filter --- struct, scipy, numpy
 
 Implementation 
@@ -20,11 +24,17 @@ Pocketsphinx website: https://cmusphinx.github.io/
 Pocketsphinx API is used to implement speech recognition. When speech module heard a certain word that is in its dictionary, it changes the value of a flag in order to inform video processor to apply a corresponding filter or make an action. To let the machine understands the commands from users, a dictionary is needed to look up which phrase the user is saying. The dictionary is created by uploading a text file containing the commands words to sphinx website. In the future, we will add more words to our dictionary in order to make the program more interactive. But now in our dictionary, the magic words are shown below.
 
 ‘BLUR’ --- Blur the photo
+
 ‘CLEAR’ --- Clear the photo
+
 ‘BIGGER’ --- Zoom in
+
 ‘SMALLER’ --- Zoom out
+
 ‘DARKER’ --- Make photo darker
+
 ‘BRIGHTER’ --- Make photo brighter
+
 ‘CHEESE’ --- Take a photo
 
 To achieve speech recognition step by step, we implement the following functions. First we import pocketsphinx library and then initialize a decoder object with a Pyaudio stream. And then we implement the function of decoding by opening the pyaudio input stream from microphone which read one block of length 1024 at a time, and decode the block. After decoding, run the corresponding callback function according to the result.

@@ -1,11 +1,10 @@
 # Selfie-Camera-with-Speech-Recognition
-## Project Outline
 
 This project is designed to implement a laptop camera application in python, used to take selfie photos with different choices of filters and operations. Combining both real time audio and video processing, this interactive camera can do zoom in/out, blur and clear, taking photo by listening to users’ voice commands, while all functions can also be realized by buttons on the user interface.
 
 this project is implemented object-oriented and there are four classes in it. Speech recognition, video processing, filter object and GUI are implemented separately as a class. Because the loop of speech recognition and the main loop of Tkinter need to run at the same time, threading is used to achieve it. 
 
-### Related Technique
+## Related Technique
 + Graphic user interface --- Tkinter
 + Multi-threading --- thread
 + Speech recognition --- pocketsphinx, pyaudio
@@ -18,7 +17,7 @@ this project is implemented object-oriented and there are four classes in it. Sp
 Pocketsphinx website: https://cmusphinx.github.io/
 Pocketsphinx API is used to implement speech recognition. When speech module heard a certain word that is in its dictionary, it changes the value of a flag in order to inform video processor to apply a corresponding filter or make an action. To let the machine understands the commands from users, a dictionary is needed to look up which phrase the user is saying. The dictionary is created by uploading a text file containing the commands words to sphinx website. In the future, we will add more words to our dictionary in order to make the program more interactive. But now in our dictionary, the magic words are shown below.
 
-+‘BLUR’ --- Blur the photo
++ ‘BLUR’ --- Blur the photo
 + ‘CLEAR’ --- Clear the photo
 + ‘BIGGER’ --- Zoom in
 + ‘SMALLER’ --- Zoom out

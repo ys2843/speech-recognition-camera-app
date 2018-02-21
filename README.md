@@ -2,14 +2,14 @@
 
 This project is designed to implement a laptop camera application in python, used to take selfie photos with different choices of filters and operations. Combining both real time audio and video processing, this interactive camera can do zoom in/out, blur and clear, taking photo by listening to users’ voice commands, while all functions can also be realized by buttons on the user interface.
 
-this project is implemented object-oriented and there are four classes in it. Speech recognition, video processing, filter object and GUI are implemented separately as a class. Because the loop of speech recognition and the main loop of Tkinter need to run at the same time, threading is used to achieve it. 
+This project is implemented object-oriented and there are four classes in it. Speech recognition, video processing, filter object and GUI are implemented separately as a class. Because the loop of speech recognition and the main loop of Tkinter need to run at the same time, threading is used to achieve it. 
 
 ## Related Technique
 + Graphic user interface --- Tkinter
-+ Multi-threading --- thread
-+ Speech recognition --- pocketsphinx, pyaudio
-+ Video process --- cv2, ImageTk, Image, os, numpy
-+ Filter --- struct, scipy, numpy
++ Multi-threading --- Thread
++ Speech recognition --- Pocketsphinx, Pyaudio
++ Video process --- Cv2, ImageTk, Image, Os, Numpy
++ Filter --- Struct, Scipy, Numpy
 
 ## Implementation 
 

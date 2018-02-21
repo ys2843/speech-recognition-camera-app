@@ -1,11 +1,11 @@
 # Selfie-Camera-with-Speech-Recognition
-### Project Outline
+## Project Outline
 
 This project is designed to implement a laptop camera application in python, used to take selfie photos with different choices of filters and operations. Combining both real time audio and video processing, this interactive camera can do zoom in/out, blur and clear, taking photo by listening to users’ voice commands, while all functions can also be realized by buttons on the user interface.
 
 this project is implemented object-oriented and there are four classes in it. Speech recognition, video processing, filter object and GUI are implemented separately as a class. Because the loop of speech recognition and the main loop of Tkinter need to run at the same time, threading is used to achieve it. 
 
-Related Technique
+### Related Technique
 + Graphic user interface --- Tkinter
 + Multi-threading --- thread
 + Speech recognition --- pocketsphinx, pyaudio
@@ -18,19 +18,13 @@ Related Technique
 Pocketsphinx website: https://cmusphinx.github.io/
 Pocketsphinx API is used to implement speech recognition. When speech module heard a certain word that is in its dictionary, it changes the value of a flag in order to inform video processor to apply a corresponding filter or make an action. To let the machine understands the commands from users, a dictionary is needed to look up which phrase the user is saying. The dictionary is created by uploading a text file containing the commands words to sphinx website. In the future, we will add more words to our dictionary in order to make the program more interactive. But now in our dictionary, the magic words are shown below.
 
-‘BLUR’ --- Blur the photo
-
-‘CLEAR’ --- Clear the photo
-
-‘BIGGER’ --- Zoom in
-
-‘SMALLER’ --- Zoom out
-
-‘DARKER’ --- Make photo darker
-
-‘BRIGHTER’ --- Make photo brighter
-
-‘CHEESE’ --- Take a photo
++‘BLUR’ --- Blur the photo
++ ‘CLEAR’ --- Clear the photo
++ ‘BIGGER’ --- Zoom in
++ ‘SMALLER’ --- Zoom out
++ ‘DARKER’ --- Make photo darker
++ ‘BRIGHTER’ --- Make photo brighter
++ ‘CHEESE’ --- Take a photo
 
 To achieve speech recognition step by step, we implement the following functions. First we import pocketsphinx library and then initialize a decoder object with a Pyaudio stream. And then we implement the function of decoding by opening the pyaudio input stream from microphone which read one block of length 1024 at a time, and decode the block. After decoding, run the corresponding callback function according to the result.
 
@@ -43,13 +37,13 @@ This module is designed to do all the image processing tricks to the input image
 When initializing, video processor creates its own speech recognition instance, for speech recognition module controls the real time processing simultaneously. And then video processor also creates its filter manager instance to read and generate filters for future use. After that, video processor module enters the recursive function show_frame to continuously capture images from camera and do the processing. 
 The following functions are implemented in video processor, as shown below.
 
-+ bright_process(self, img)
++ `bright_process(self, img)`
  This function is for brightness control, it reads in an image object, and add or subtract an int number to each of the RGB layer of that image.
-+ filter_process(self, img)
++ `filter_process(self, img)`
  This function read an image, and call functions from filter manager to apply filter to the image.
-+ zoom_process(self, img)
++ `zoom_process(self, img)`
  To do zoom in and zoom out, this function read an image and do crop and down sampling to create the zooming effect. 
-+ show_frame(self)
++ `show_frame(self)`
  This function calls all processing functions in this class to implement the real time video processing. It read one frame from the camera at a time, flip and resize the frame to fit the window. After applying all the processing on the input image, it display the output to the label on its parent GUI.
 
 ### GUI

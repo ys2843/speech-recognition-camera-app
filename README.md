@@ -11,6 +11,10 @@ This project is implemented object-oriented and there are four classes in it. Sp
 + Video process --- Cv2, ImageTk, Image, Os, Numpy
 + Filter --- Struct, Scipy, Numpy
 
+## Getting Started
+To run the app, first install all related packages and then go to root directiory.
+Type ```python GUI.py```
+
 ## Implementation 
 
 ### Speech Recognition

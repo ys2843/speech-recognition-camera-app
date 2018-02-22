@@ -12,8 +12,16 @@ This project is implemented object-oriented and there are four classes in it. Sp
 + Filter --- Struct, Scipy, Numpy
 
 ## Getting Started
-To run the app, first install all related packages and then go to root directiory.
-Type ```python GUI.py```
+To run the app, first install all packages
++ Struct
++ Numpy
++ Scipy
++ Pyaudio
++ Tkinter
++ ImageTK
++ Image
+
+Then go to root directiory and type ```python GUI.py```
 
 ## Implementation 
 

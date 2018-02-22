@@ -4,13 +4,6 @@ This project is designed to implement a laptop camera application in python, use
 
 This project is implemented object-oriented and there are four classes in it. Speech recognition, video processing, filter object and GUI are implemented separately as a class. Because the loop of speech recognition and the main loop of Tkinter need to run at the same time, threading is used to achieve it. 
 
-## Related Technique
-+ Graphic user interface --- Tkinter
-+ Multi-threading --- Thread
-+ Speech recognition --- Pocketsphinx, Pyaudio
-+ Video process --- Cv2, ImageTk, Image, Os, Numpy
-+ Filter --- Struct, Scipy, Numpy
-
 ## Getting Started
 To run the app, first install all packages
 + Struct

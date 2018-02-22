@@ -9,9 +9,9 @@ class SpeechRecognition:
         self.command = 0
         self.config = Decoder.default_config()
         self.config.set_string('-hmm',
-                               '/Users/shiyang/PycharmProjects/DSP_LAB_Final_project/pocketsphinx-master/model/en-us/en-us/')
-        self.config.set_string('-lm', '/Users/shiyang/PycharmProjects/DSP_LAB_Final_project/6464.lm')
-        self.config.set_string('-dict', '/Users/shiyang/PycharmProjects/DSP_LAB_Final_project/6464.dic')
+                               './pocketsphinx-master/model/en-us/en-us/')
+        self.config.set_string('-lm', './6464.lm')
+        self.config.set_string('-dict', '/./6464.dic')
         self.decoder = Decoder(self.config)
 
         p = pyaudio.PyAudio()

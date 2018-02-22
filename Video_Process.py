@@ -6,7 +6,6 @@ from Filter import *
 import os
 from Speech_Recognition import *
 
-
 class VideoProcess:
     global imgf, speech_enable, do_filter, ratio, blur
     parent = None
@@ -25,7 +24,7 @@ class VideoProcess:
     # create filter management
     def create_filter_manager(self):
         # Filter class initialization
-        path = '/Users/shiyang/PycharmProjects/DSP_LAB_Final_project/curves/'
+        path = './curves/'
         self.filter_manager = FilterManager()
         # Load filters from .acv file
         for files in os.listdir(path):
